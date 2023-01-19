@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 public class Triangle extends Figure {
     public Triangle(double a, double b, double c) {
         super(a, b, c);
@@ -6,13 +8,12 @@ public class Triangle extends Figure {
     }
 
     @Override
-    double countPer() {
+    void countPer() {
         per = a + b + c;
-        return per;
+
     }
 
-    public double getPer() {
-
+    double getPer(){
         return per;
     }
 
@@ -20,16 +21,13 @@ public class Triangle extends Figure {
         return sqr;
     }
 
-    public void setSide(double a, double b, double c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-    }
+
 
     @Override
-    double countSquare() {
+    void countSquare() {
         p = per / 2;
         sqr = Math.sqrt(p * (p - a) * (p - b) * (p - c));
-        return sqr;
+
+
     }
 }

@@ -6,18 +6,18 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    double countPer() {
+    void countPer() {
         per = 2 * (a + b);
-        return per;
+
     }
 
-    double getPer() {
-        return per;
+    public double getPer() {
+return per;
     }
 
-    double countSquare() {
+    void countSquare() {
         sqr = a * b;
-        return sqr;
+
     }
 
     double getSqr() {

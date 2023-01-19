@@ -18,11 +18,12 @@ public abstract class Figure {
         this.rad = rad;
     }
 
-    abstract double countPer();
+    abstract void countPer();
 
-    abstract double countSquare();
+    abstract void countSquare();
 
-    public double getPer() {
-        return per;
-    }
+    abstract double getPer();
+    abstract double getSqr();
+
+
 }

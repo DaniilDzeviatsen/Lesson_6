@@ -1,7 +1,8 @@
 public class TestDrive {
     public static void main(String[] args) {
         Triangle tr = new Triangle(3, 4, 5);
-
+        tr.countPer();
+        tr.countSquare();
 
         System.out.println(tr.getPer());
         System.out.println(tr.getSqr());
@@ -16,11 +17,19 @@ public class TestDrive {
         System.out.println(rec.getPer());
         System.out.println(rec.getSqr());
         Figure[] arr = new Figure[5];
-        arr[0] = new Triangle(3, 7, 9);
-        arr[1] = new Circle(5);
-        arr[2] = new Rectangle(4, 6);
-        arr[3] = new Circle(7);
-        arr[4] = new Triangle(4, 4, 4);
-        System.out.println(arr[0].getPer() + arr[1].getPer() + arr[2].per + arr[3].per + arr[4].per);
+        arr[0] = new Circle(3);
+        arr[1]=new Triangle(3,4,5);
+        arr[2]=new Rectangle(3,4);
+        arr[3]=new Circle(5);
+        arr[4]=new Rectangle(5,6);
+        double sum=0;
+        for (int u=0; u<5; u++){
+            arr[u].countPer();
+            sum=sum+arr[u].getPer();
+        }
+
+
+
+        System.out.println(sum);
     }
 }
