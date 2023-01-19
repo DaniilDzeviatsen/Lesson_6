@@ -1,31 +1,35 @@
-public class Triangle extends Figure{
-        public Triangle(double a, double b, double c){
-        super(a,b,c);
+public class Triangle extends Figure {
+    public Triangle(double a, double b, double c) {
+        super(a, b, c);
 
 
     }
+
     @Override
     double countPer() {
         per = a + b + c;
-return per;
+        return per;
     }
-    public double getPer(){
 
-            return per;
-            }
-            public double getSqr(){
-            return sqr;
-            }
-            public void setSide(double a, double b, double c){
-            this.a=a;
-            this.b=b;
-            this.c=c;
-            }
+    public double getPer() {
+
+        return per;
+    }
+
+    public double getSqr() {
+        return sqr;
+    }
+
+    public void setSide(double a, double b, double c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
 
     @Override
     double countSquare() {
-        p=per/2;
-        sqr=Math.sqrt(p*(p-a)*(p-b)*(p-c));
-return sqr;
+        p = per / 2;
+        sqr = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+        return sqr;
     }
 }
